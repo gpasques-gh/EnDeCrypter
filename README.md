@@ -2,7 +2,7 @@
 
 **Author : @gpasques-gh**
 
-**Disclaimer** : This project was made by someone which is a complete noob about everything cryptographic related. Any feedback would be appreciated.
+**Disclaimer** : This project was made by someone which is a complete noob about anything cryptographic related. Any feedback would be appreciated.
 
 ## 1) How to use it ?
 - Launching `Main` and following instructions
