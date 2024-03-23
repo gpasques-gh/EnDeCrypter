@@ -23,7 +23,7 @@ public class Encryption {
 
         // Looping on the FileReader
         while (c != -1) {
-            shift = (int) (26 * Math.random()); // Getting a random number between 0-26
+            shift = (int)(26 * Math.random()); // Getting a random number between 0-26
             key.write(shift); // Writing the number on the encryption key
             fileWriter.write(encryptChar(c, shift)); // Writing the encrypted character on the output file
             c = fileReader.read(); // Getting the next character
@@ -59,12 +59,9 @@ public class Encryption {
         if (index == -1) {
             return c; // Return the character without encrypting it
         }
-        // Making the shift get back to the start if it's above the length of the alphabet (26)
-        while (index + shift >= alphabet.length) {
-            shift -= alphabet.length;
-        }
+
         // Return the shifted/encrypted character
-        return alphabet[index + shift];
+        return alphabet[(index + shift) % alphabet.length];
     }
 
 }

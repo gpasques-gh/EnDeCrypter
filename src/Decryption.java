@@ -58,14 +58,12 @@ public class Decryption {
             return c; // Return the character without decrypting it
         }
 
-        System.out.println(shift + " shift");
-        System.out.println(index + " index");
-
-        // Making the shift get back to the end of the alphabet if it's below 0
         while (index - shift < 0) {
             shift -= alphabet.length;
         }
+
         // Return the shifted/decrypted character
+        //return alphabet[Math.abs(index - shift)%alphabet.length];
         return alphabet[index - shift];
     }
 }
