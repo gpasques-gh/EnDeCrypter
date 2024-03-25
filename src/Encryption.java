@@ -23,7 +23,6 @@ public class Encryption {
 
         // Looping on the FileReader
         while (c != -1) {
-            System.out.println(c);
             shift = (int)(27 * Math.random()); // Getting a random number between 0-26
             key.write(shift); // Writing the number on the encryption key
             fileWriter.write(encryptChar(c, shift)); // Writing the encrypted character on the output file
