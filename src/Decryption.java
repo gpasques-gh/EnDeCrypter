@@ -46,9 +46,10 @@ public class Decryption {
             c = Character.toLowerCase(c);
         }
         // Getting the alphabet with ASCII characters
-        int[] alphabet = new int[26];
-        for (int i = 0; i < 26; i++) {
-            alphabet[i] = 97 + i;
+        int[] alphabet = new int[27];
+        for (int i = 0; i < 27; i++) {
+            if (i == 0) alphabet[i] = 32; // Adding space character
+            else alphabet[i] = 97 + i;
             if (alphabet[i] == c) {
                 index = i;
             }

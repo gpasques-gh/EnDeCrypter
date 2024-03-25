@@ -23,7 +23,8 @@ public class Encryption {
 
         // Looping on the FileReader
         while (c != -1) {
-            shift = (int)(26 * Math.random()); // Getting a random number between 0-26
+            System.out.println(c);
+            shift = (int)(27 * Math.random()); // Getting a random number between 0-26
             key.write(shift); // Writing the number on the encryption key
             fileWriter.write(encryptChar(c, shift)); // Writing the encrypted character on the output file
             c = fileReader.read(); // Getting the next character
@@ -48,9 +49,10 @@ public class Encryption {
             c = Character.toLowerCase(c);
         }
         // Getting the alphabet with ASCII characters
-        int[] alphabet = new int[26];
-        for (int i = 0; i < 26; i++) {
-            alphabet[i] = 97 + i;
+        int[] alphabet = new int[27];
+        for (int i = 0; i < 27; i++) {
+            if (i == 0) alphabet[i] = 32;
+            else alphabet[i] = 97 + i;
             if (alphabet[i] == c) {
                 index = i;
             }
